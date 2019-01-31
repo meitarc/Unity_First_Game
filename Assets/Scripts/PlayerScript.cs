@@ -4,26 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
+    public int boatLive;
     public int playerSpeed;
-
     public int playerLives;
-    public Rigidbody bullet;
-
+    //public Rigidbody bullet;
     public Camera playerCamera;
-
     public static int playerScore;
-
     public GameObject bulletPrefab;
-
-    public AudioClip gameOverSound;
+    //public AudioClip gameOverSound;
     public AudioClip coinSound;
-
+    
     // Use this for initialization
     void Start () {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             playerLives = 3;
             playerScore = 0;
+            boatLive = 15;
         }
     }
 	
@@ -38,6 +35,11 @@ public class PlayerScript : MonoBehaviour {
             SceneManager.LoadScene(2);
         }
         if (playerScore > 2500 && SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            SceneManager.LoadScene(5);
+        }
+
+        if (playerScore > 3000 && SceneManager.GetActiveScene().buildIndex == 5)
         {
             SceneManager.LoadScene(4);
         }
@@ -57,20 +59,31 @@ public class PlayerScript : MonoBehaviour {
         {
             playerScore += 100;
         }
+        if(SceneManager.GetActiveScene().buildIndex == 2&&transform.position.y<-100)
+        {
+            playerLives--;
+            transform.position = new Vector3(19.48f, 24.13f, 117.6f);
+        }
+        if(boatLive<1)
+        {
+            playerLives--;
+            boatLive = 15;
+        }
     }
     void OnGUI()
     {
         GUI.Label(new Rect(90, 40, 300, 20), "Score: " + playerScore);
-        GUI.Label(new Rect(90, 50, 300, 20), "Lives " + playerLives);
+        GUI.Label(new Rect(90, 50, 300, 20), "Lives: " + playerLives);
+        GUI.Label(new Rect(90, 60, 300, 20), "Boat live: " + boatLive);
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Zombie")
         {
-            playerLives--;
+          
             transform.position = new Vector3(1.504f, 0.66f, -38.874f);
-
+            playerLives--;
         }
 
         if (other.gameObject.tag == "coin")
@@ -92,5 +105,10 @@ public class PlayerScript : MonoBehaviour {
             AudioSource.PlayClipAtPoint(coinSound, transform.position);
             Destroy(other.gameObject);
         }
+    }
+
+    public void BoatHurt()
+    {
+        boatLive--;
     }
 }

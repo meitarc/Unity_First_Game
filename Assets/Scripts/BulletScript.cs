@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
-    public int bulletSpeed = 10;
+    //public int bulletSpeed = 10;
     public Transform explosion;
     public float speed=8f;
     public AudioClip sound;
@@ -28,7 +28,7 @@ public class BulletScript : MonoBehaviour {
 	}
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag== "Zombie"|| other.gameObject.tag == "Mushroom")
+        if(other.gameObject.tag== "Zombie"|| other.gameObject.tag == "Mushroom"|| other.gameObject.tag == "EnemyShips")
         {
             AudioSource.PlayClipAtPoint(sound, transform.position);
             PlayerScript.playerScore += 100;
