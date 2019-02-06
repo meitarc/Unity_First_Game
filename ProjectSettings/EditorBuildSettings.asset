@@ -12,15 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/1.unity
     guid: 6fc3195a559d4844097c725c34a1829d
   - enabled: 1
-    path: "Assets/Scenes/\u200F\u200F2.unity"
+    path: Assets/Scenes/2.unity
     guid: a9cee2310e806ff4dafe0f95eba35c98
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: c3dee327e4e58fd4c9ac12c73d4ed624
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: 90dc12d32fe84574ea4bd1d0c55dbf34
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: 9999329f47e8c8f4cb51b2a2808c72c9
+  - enabled: 1
+    path: Assets/Scenes/bonus_2D.unity
+    guid: 882a3ad76f9723243b4a58f23a442fda
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 64085dc06a0c69849bea5ccb9cce7413
   - enabled: 1
     path: "Assets/Scenes/\u200F\u200FWin.unity"
     guid: 5c07dcf8efe9c7d4ab97d350e916cfb2
-  - enabled: 1
-    path: Assets/Scenes/3.unity
-    guid: c3dee327e4e58fd4c9ac12c73d4ed624
   m_configObjects: {}

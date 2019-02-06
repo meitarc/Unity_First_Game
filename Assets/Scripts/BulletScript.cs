@@ -28,7 +28,7 @@ public class BulletScript : MonoBehaviour {
 	}
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag== "Zombie"|| other.gameObject.tag == "Mushroom"|| other.gameObject.tag == "EnemyShips")
+        if(other.gameObject.tag== "Zombie"|| other.gameObject.tag == "Mushroom"|| other.gameObject.tag == "EnemyShips"|| other.gameObject.tag == "Monster")
         {
             AudioSource.PlayClipAtPoint(sound, transform.position);
             PlayerScript.playerScore += 100;
