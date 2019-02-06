@@ -1057,6 +1057,18 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &501571418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1916438711564812527, guid: 00a1458d4cbc6af4db8e2142f68c1644,
+    type: 3}
+  m_PrefabInstance: {fileID: 501571411}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &575455202
 GameObject:
   m_ObjectHideFlags: 0
@@ -4598,9 +4610,11 @@ MonoBehaviour:
   text_score: {fileID: 501571417}
   text_live: {fileID: 501571416}
   text_boatLive: {fileID: 501571413}
+  text_bullets: {fileID: 501571418}
   img_key: {fileID: 501571415}
   img_boat: {fileID: 501571414}
   txt_boat: {fileID: 501571412}
+  gun: {fileID: 0}
 --- !u!4 &2099443443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4427613559659150, guid: e7965cb5f3b6b49439772edd4131b2b0,

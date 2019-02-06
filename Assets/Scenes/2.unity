@@ -965,6 +965,18 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &99276706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1916438711564812527, guid: 00a1458d4cbc6af4db8e2142f68c1644,
+    type: 3}
+  m_PrefabInstance: {fileID: 99276703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &101066085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8645a0f5dbe846a4bae22a67d2144035,
@@ -5098,6 +5110,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d0754d440e3664fb2b639b2a7d08ca, type: 3}
+--- !u!1 &1083007264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010118919020, guid: a6d0754d440e3664fb2b639b2a7d08ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1083007263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1084237251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9940,7 +9958,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boatLive: 15
   playerSpeed: 0
-  playerLives: 3
   playerCamera: {fileID: 1719558944}
   bulletPrefab: {fileID: 1210921434136364, guid: 2bb2c1493d462164b9e7103401733b5f,
     type: 3}
@@ -9949,9 +9966,11 @@ MonoBehaviour:
   text_score: {fileID: 99276705}
   text_live: {fileID: 99276704}
   text_boatLive: {fileID: 249277238}
+  text_bullets: {fileID: 99276706}
   img_key: {fileID: 1571223019}
   img_boat: {fileID: 247909738}
   txt_boat: {fileID: 249277236}
+  gun: {fileID: 1083007264}
 --- !u!135 &1926111184
 SphereCollider:
   m_ObjectHideFlags: 0

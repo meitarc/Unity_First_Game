@@ -14,6 +14,9 @@ TagManager:
   - Coins
   - key
   - Next_Level
+  - gun
+  - Monster
+  - cartridge
   layers:
   - Default
   - TransparentFX

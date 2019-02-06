@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
+    public static int bullets;
     public int boatLive;
     public int playerSpeed;
     public static int playerLives=3;
@@ -19,9 +20,12 @@ public class PlayerScript : MonoBehaviour {
     public Text text_score;
     public Text text_live;
     public Text text_boatLive;
+    public Text text_bullets;
     public GameObject img_key;
     public GameObject img_boat;
     public GameObject txt_boat;
+    public GameObject gun;
+
     // Use this for initialization
     void Start () {
         if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -30,6 +34,7 @@ public class PlayerScript : MonoBehaviour {
             playerScore = 0;
             boatLive = 15;
             keys = 0;
+            bullets = 0;
         }
         if(SceneManager.GetActiveScene().buildIndex == 3)
         {
@@ -48,8 +53,8 @@ public class PlayerScript : MonoBehaviour {
         text_score.text = playerScore.ToString();
         text_live.text = playerLives.ToString();
         text_boatLive.text = boatLive.ToString();
-
-        if(keys>0)
+        text_bullets.text = bullets.ToString();
+        if (keys>0)
         {
             img_key.SetActive(true);
         }
@@ -78,11 +83,12 @@ public class PlayerScript : MonoBehaviour {
         //transform.Translate(Vector3.right*amtToMove);
 
         GetComponent<Transform>().Translate(Vector3.right * amtToMove);
-        if(Input.GetKeyDown(KeyCode.Mouse0)&& SceneManager.GetActiveScene().buildIndex != 6)
+        if(Input.GetKeyDown(KeyCode.Mouse0)&& SceneManager.GetActiveScene().buildIndex != 6&&bullets>0)
         {
             GameObject bulletObject = Instantiate(bulletPrefab);
             bulletObject.transform.position = playerCamera.transform.position + playerCamera.transform.forward;
             bulletObject.transform.forward = playerCamera.transform.forward;
+            bullets--;
         }
 
         if(SceneManager.GetActiveScene().buildIndex == 2&&transform.position.y<-100)
@@ -164,6 +170,17 @@ public class PlayerScript : MonoBehaviour {
         {
             keys=1;
             AudioSource.PlayClipAtPoint(coinSound, transform.position);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "gun")
+        {
+            gun.SetActive(true);
+            Destroy(other.gameObject);
+        }
+        
+        if (other.gameObject.tag == "cartridge")
+        {
+            bullets += 30;
             Destroy(other.gameObject);
         }
     }

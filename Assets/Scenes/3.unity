@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -580,8 +580,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196962358}
-  m_LocalRotation: {x: 0.20281912, y: 0.6969773, z: 0.21651983, w: -0.65284467}
-  m_LocalPosition: {x: 763.91956, y: -524.3277, z: 50.01028}
+  m_LocalRotation: {x: -0.29320905, y: 0.061055418, z: 0.0187738, w: 0.9539121}
+  m_LocalPosition: {x: 2.8738267, y: -5.672593, z: -49.63953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2072,9 +2072,11 @@ MonoBehaviour:
   text_score: {fileID: 2137029178}
   text_live: {fileID: 629561312}
   text_boatLive: {fileID: 1365205452}
+  text_bullets: {fileID: 1317485867}
   img_key: {fileID: 1976474308}
   img_boat: {fileID: 64347910}
   txt_boat: {fileID: 1365205450}
+  gun: {fileID: 0}
 --- !u!1 &1125443402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2238,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1317485867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1916438711564812527, guid: 00a1458d4cbc6af4db8e2142f68c1644,
+    type: 3}
+  m_PrefabInstance: {fileID: 366984219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1319014463
 PrefabInstance:
   m_ObjectHideFlags: 0
