@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
-    public static int bullets;
+    public static int bullets=0;
     public int boatLive;
     public int playerSpeed;
     public static int playerLives=3;
@@ -13,8 +13,10 @@ public class PlayerScript : MonoBehaviour {
     public static int playerScore;
     public GameObject bulletPrefab;
     public AudioClip coinSound;
+    public AudioClip bulletSound;
     public static int keys;
     public GameObject nextLevel;
+    public GameObject lineRenderer;
     public static bool chestOpen = false;
 
     public Text text_score;
@@ -62,6 +64,10 @@ public class PlayerScript : MonoBehaviour {
         {
             img_key.SetActive(false);
         }
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
 
         if (playerLives < 1)
         {
@@ -77,6 +83,7 @@ public class PlayerScript : MonoBehaviour {
         {
             keys = 0;
             nextLevel.SetActive(true);
+            lineRenderer.SetActive(true);
             chestOpen = false;
         }
         float amtToMove = playerSpeed * Input.GetAxis("Horizontal") * Time.deltaTime;
@@ -175,12 +182,14 @@ public class PlayerScript : MonoBehaviour {
         if (other.gameObject.tag == "gun")
         {
             gun.SetActive(true);
+            AudioSource.PlayClipAtPoint(bulletSound, transform.position);
             Destroy(other.gameObject);
         }
         
         if (other.gameObject.tag == "cartridge")
         {
             bullets += 30;
+            AudioSource.PlayClipAtPoint(bulletSound, transform.position);
             Destroy(other.gameObject);
         }
     }

@@ -3,7 +3,21 @@ guid: 766ef516a996fd34896d5ec0d22bd658
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerCamera: {instanceID: 0}
+  - bulletPrefab: {instanceID: 0}
+  - coinSound: {instanceID: 0}
+  - bulletSound: {fileID: 8300000, guid: 140d306b265b5e0439487a8c837d1206, type: 3}
+  - nextLevel: {instanceID: 0}
+  - lineRenderer: {instanceID: 0}
+  - text_score: {instanceID: 0}
+  - text_live: {instanceID: 0}
+  - text_boatLive: {instanceID: 0}
+  - text_bullets: {instanceID: 0}
+  - img_key: {instanceID: 0}
+  - img_boat: {instanceID: 0}
+  - txt_boat: {instanceID: 0}
+  - gun: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

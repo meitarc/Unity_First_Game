@@ -17,6 +17,7 @@ TagManager:
   - gun
   - Monster
   - cartridge
+  - Bullet
   layers:
   - Default
   - TransparentFX
